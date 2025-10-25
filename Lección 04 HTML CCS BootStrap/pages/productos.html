@@ -1,0 +1,665 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pasos & Estilo - Productos</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap"> 
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="icon" type="image/png" href="./assets/Tienda.jpg">
+</head>
+<body>
+    <header class="bg-ligth border-bottom">
+        <nav class="container navbar navbar-expand-md navbar-light">
+            <a class="navbar-brand-fw-bold" href="../index.html">Pasos & Estilo</a>
+            <button class="navbar-toggler" type="button" data-bs.toggle="collapse" data-bs-target="#mainNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="mainNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link active" href="../index.html">Inicio</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="./productos.html">Productos</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="contacto.html">Contacto</a></li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="carrito.html">Carrito <i class="bi bi-cart"></i> <span id="cart-count">0</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </nav>          
+    </header>
+    <main class="container my-4">
+        <h1 class="h3 mb-4 text-center">Catalogo completo</h1>
+            <div class="row">
+                <div class="col-6 col-md-3 mb-4">
+                    <div class="card h-100">
+                        <img src="../assets/deportivo1.jpg" class="card-img-top img-fluid" alt="AeroStep">
+                        <div class="card-body text-center d-flex flex-column">
+                            <h5 class="card-tittle">AeroStep</h5>
+                            <p class="text-success fw-bold mb-1">$300.000</p>
+                            <button class="btn btn-primary mt-auto add-to-cart" data-id="1" data-name="AeroStep" data-price="300000"> Agregar al carrito
+                            </button>
+                            <button class="btn btn-link mt-2" data-bs-toggle="modal" data-bs-target="#product1Modal">
+                                Ver detalles
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-6 col-md-3 mb-4">
+                    <div class="card h-100">
+                        <img src="../assets/deportivo2.jpg" class="card-img-top img-fluid" alt="Velox">
+                        <div class="card-body text-center d-flex flex-column">
+                            <h5 class="card-tittle">Velox</h5>
+                            <p class="text-success fw-bold mb-1">$280.000</p>
+                            <button class="btn btn-primary mt-auto add-to-cart" data-id="2" data-name="Velox" data-price="280000"> Agregar al carrito
+                            </button>
+                            <button class="btn btn-link mt-2" data-bs-toggle="modal" data-bs-target="#product2Modal">
+                                Ver detalles
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-6 col-md-3 mb-4">
+                    <div class="card h-100">
+                        <img src="../assets/deportivo3.jpg" class="card-img-top img-fluid" alt="Impulso">
+                        <div class="card-body text-center d-flex flex-column">
+                            <h5 class="card-tittle">Impulso</h5>
+                            <p class="text-success fw-bold mb-1">$310.000</p>
+                            <button class="btn btn-primary mt-auto add-to-cart" data-id="3" data-name="Impulso" data-price="310000"> Agregar al carrito
+                            </button>
+                            <button class="btn btn-link mt-2" data-bs-toggle="modal" data-bs-target="#product3Modal">
+                                Ver detalles
+                            </button>
+                        </div>
+                    </div>
+                </div>   
+            </div>
+            <div id="add-to-cart-msg" class="alert alert-success position-fixed bottom-0 enda-0 me-3 mb-3" style="display:none">
+                Producto añadido al carrito
+            </div>
+    </main>
+<!-- Modals de detalles de producto (galerías) -->
+  <!-- Modal Producto 1 -->
+  <div class="modal fade" id="product1Modal" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-lg">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title">AeroStep - Imágenes</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+        </div>
+        <div class="modal-body">
+          <div id="carouselProduct1" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-inner">
+              <div class="carousel-item active">
+                <img src="../assets/deportivo21.jpg" class="d-block w-100" alt="AeroStep imagen 1">
+              </div>
+              <div class="carousel-item">
+                <img src="../assets/deportivo1.jpg" class="d-block w-100" alt="AeroStep imagen 2">
+              </div>
+              <div class="carousel-item">
+                <img src="../assets/deportivo22.jpg" class="d-block w-100" alt="AeroStep imagen 3">
+              </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselProduct1" data-bs-slide="prev">
+              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Anterior</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselProduct1" data-bs-slide="next">
+              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Siguiente</span>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- Modal Producto 2 -->
+  <div class="modal fade" id="product2Modal" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-lg">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title">Velox - Imágenes</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+        </div>
+        <div class="modal-body">
+          <div id="carouselProduct2" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-inner">
+              <div class="carousel-item active">
+                <img src="../assets/deportivo11.jpg" class="d-block w-100" alt="Velox imagen 1">
+              </div>
+              <div class="carousel-item">
+                <img src="../assets/deportivo12.jpg" class="d-block w-100" alt="Velox imagen 2">
+              </div>
+              <div class="carousel-item">
+                <img src="../assets/deportivo1.jpg" class="d-block w-100" alt="Velox imagen 3">
+              </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselProduct2" data-bs-slide="prev">
+              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Anterior</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselProduct2" data-bs-slide="next">
+              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Siguiente</span>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+    <!-- Modal Producto 3 -->
+  <div class="modal fade" id="product3Modal" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-lg">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title">Impulso - Imágenes</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+        </div>
+        <div class="modal-body">
+          <div id="carouselProduct3" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-inner">
+              <div class="carousel-item active">
+                <img src="../assets/deportivo31.jpg" class="d-block w-100" alt="Impulso imagen 1">
+              </div>
+              <div class="carousel-item">
+                <img src="../assets/deportivo32.jpg" class="d-block w-100" alt="Impulso imagen 2">
+              </div>
+              <div class="carousel-item">
+                <img src="../assets/deportivo3.jpg" class="d-block w-100" alt="Impulso imagen 3">
+              </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselProduct3" data-bs-slide="prev">
+              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Anterior</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselProduct3" data-bs-slide="next">
+              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Siguiente</span>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+    
+  
+  <main class="container my-4">
+        <h1 class="h3 mb-4 text-center"></h1>
+            <div class="row">
+                <div class="col-6 col-md-3 mb-4">
+                    <div class="card h-100">
+                        <img src="../assets/elegante1.jpg" class="card-img-top img-fluid" alt="Eterna">
+                        <div class="card-body text-center d-flex flex-column">
+                            <h5 class="card-tittle">Eterna</h5>
+                            <p class="text-success fw-bold mb-1">$500.000</p>
+                            <button class="btn btn-primary mt-auto add-to-cart" data-id="1" data-name="Eterna" data-price="500000"> Agregar al carrito
+                            </button>
+                            <button class="btn btn-link mt-2" data-bs-toggle="modal" data-bs-target="#product4Modal">
+                                Ver detalles
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-6 col-md-3 mb-4">
+                    <div class="card h-100">
+                        <img src="../assets/elegante2.jpg" class="card-img-top img-fluid" alt="Catedral">
+                        <div class="card-body text-center d-flex flex-column">
+                            <h5 class="card-tittle">Catedral</h5>
+                            <p class="text-success fw-bold mb-1">$480.000</p>
+                            <button class="btn btn-primary mt-auto add-to-cart" data-id="2" data-name="Catedral" data-price="480000"> Agregar al carrito
+                            </button>
+                            <button class="btn btn-link mt-2" data-bs-toggle="modal" data-bs-target="#product5Modal">
+                                Ver detalles
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-6 col-md-3 mb-4">
+                    <div class="card h-100">
+                        <img src="../assets/elegante3.jpg" class="card-img-top img-fluid" alt="Gran Reserva">
+                        <div class="card-body text-center d-flex flex-column">
+                            <h5 class="card-tittle">Gran Reserva</h5>
+                            <p class="text-success fw-bold mb-1">$540.000</p>
+                            <button class="btn btn-primary mt-auto add-to-cart" data-id="3" data-name="Gran Reserva" data-price="540000"> Agregar al carrito
+                            </button>
+                            <button class="btn btn-link mt-2" data-bs-toggle="modal" data-bs-target="#product6Modal">
+                                Ver detalles
+                            </button>
+                        </div>
+                    </div>
+                </div>   
+            </div>
+            <div id="add-to-cart-msg" class="alert alert-success position-fixed bottom-0 enda-0 me-3 mb-3" style="display:none">
+                Producto añadido al carrito
+            </div>
+    </main>
+<!-- Modals de detalles de producto (galerías) -->
+  <!-- Modal Producto 1 -->
+  <div class="modal fade" id="product4Modal" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-lg">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title">Eterna - Imágenes</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+        </div>
+        <div class="modal-body">
+          <div id="carouselProduct4" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-inner">
+              <div class="carousel-item active">
+                <img src="../assets/elegante11.jpg" class="d-block w-100" alt="Eterna imagen 1">
+              </div>
+              <div class="carousel-item">
+                <img src="../assets/elegante12.jpg" class="d-block w-100" alt="Eterna imagen 2">
+              </div>
+              <div class="carousel-item">
+                <img src="../assets/elegante1111.jpg" class="d-block w-100" alt="Eterna imagen 3">
+              </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselProduct4" data-bs-slide="prev">
+              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Anterior</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselProduct4" data-bs-slide="next">
+              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Siguiente</span>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- Modal Producto 2 -->
+  <div class="modal fade" id="product5Modal" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-lg">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title">Catedral - Imágenes</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+        </div>
+        <div class="modal-body">
+          <div id="carouselProduct5" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-inner">
+              <div class="carousel-item active">
+                <img src="../assets/elegante2.jpg" class="d-block w-100" alt="Catedral imagen 1">
+              </div>
+              <div class="carousel-item">
+                <img src="../assets/tacones1.jpg" class="d-block w-100" alt="Catedral imagen 2">
+              </div>
+              <div class="carousel-item">
+                <img src="../assets/tacones2.jpg" class="d-block w-100" alt="Catedral imagen 3">
+              </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselProduct5" data-bs-slide="prev">
+              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Anterior</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselProduct5" data-bs-slide="next">
+              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Siguiente</span>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+    <!-- Modal Producto 3 -->
+  <div class="modal fade" id="product6Modal" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-lg">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title">Gran Reserva - Imágenes</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+        </div>
+        <div class="modal-body">
+          <div id="carouselProduct6" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-inner">
+              <div class="carousel-item active">
+                <img src="../assets/elegantes32.jpg" class="d-block w-100" alt="Gran Reserva imagen 1">
+              </div>
+              <div class="carousel-item">
+                <img src="../assets/elegante3.jpg" class="d-block w-100" alt="Gran Reserva imagen 2">
+              </div>
+              <div class="carousel-item">
+                <img src="../assets/elegantes333.jpg" class="d-block w-100" alt="Gran Reserva imagen 3">
+              </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselProduct6" data-bs-slide="prev">
+              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Anterior</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselProduct6" data-bs-slide="next">
+              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Siguiente</span>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <main class="container my-4">
+        <h1 class="h3 mb-4 text-center"></h1>
+            <div class="row">
+                <div class="col-6 col-md-3 mb-4">
+                    <div class="card h-100">
+                        <img src="../assets/casual1.jpg" class="card-img-top img-fluid" alt="TrendyWalk">
+                        <div class="card-body text-center d-flex flex-column">
+                            <h5 class="card-tittle">TrendyWalk</h5>
+                            <p class="text-success fw-bold mb-1">$180.000</p>
+                            <button class="btn btn-primary mt-auto add-to-cart" data-id="1" data-name="TrendyWalk" data-price="180000"> Agregar al carrito
+                            </button>
+                            <button class="btn btn-link mt-2" data-bs-toggle="modal" data-bs-target="#product7Modal">
+                                Ver detalles
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-6 col-md-3 mb-4">
+                    <div class="card h-100">
+                        <img src="../assets/casual2.jpg" class="card-img-top img-fluid" alt="Essenza">
+                        <div class="card-body text-center d-flex flex-column">
+                            <h5 class="card-tittle">Essenza</h5>
+                            <p class="text-success fw-bold mb-1">$200.000</p>
+                            <button class="btn btn-primary mt-auto add-to-cart" data-id="2" data-name="Essenza" data-price="200000"> Agregar al carrito
+                            </button>
+                            <button class="btn btn-link mt-2" data-bs-toggle="modal" data-bs-target="#product8Modal">
+                                Ver detalles
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-6 col-md-3 mb-4">
+                    <div class="card h-100">
+                        <img src="../assets/casual3.jpg" class="card-img-top img-fluid" alt="Nómada">
+                        <div class="card-body text-center d-flex flex-column">
+                            <h5 class="card-tittle">Nómada</h5>
+                            <p class="text-success fw-bold mb-1">$140.000</p>
+                            <button class="btn btn-primary mt-auto add-to-cart" data-id="3" data-name="Nómada" data-price="140000"> Agregar al carrito
+                            </button>
+                            <button class="btn btn-link mt-2" data-bs-toggle="modal" data-bs-target="#product9Modal">
+                                Ver detalles
+                            </button>
+                        </div>
+                    </div>
+                </div>   
+            </div>
+            <div id="add-to-cart-msg" class="alert alert-success position-fixed bottom-0 enda-0 me-3 mb-3" style="display:none">
+                Producto añadido al carrito
+            </div>
+    </main>
+<!-- Modals de detalles de producto (galerías) -->
+  <!-- Modal Producto 1 -->
+  <div class="modal fade" id="product7Modal" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-lg">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title">TrendyWalk - Imágenes</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+        </div>
+        <div class="modal-body">
+          <div id="carouselProduct7" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-inner">
+              <div class="carousel-item active">
+                <img src="../assets/casuales11.jpg" class="d-block w-100" alt="TrendyWalk imagen 1">
+              </div>
+              <div class="carousel-item">
+                <img src="../assets/casuales12.jpg" class="d-block w-100" alt="TrendyWalk imagen 2">
+              </div>
+              <div class="carousel-item">
+                <img src="../assets/casual1.jpg" class="d-block w-100" alt="TrendyWalk imagen 3">
+              </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselProduct7" data-bs-slide="prev">
+              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Anterior</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselProduct7" data-bs-slide="next">
+              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Siguiente</span>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- Modal Producto 2 -->
+  <div class="modal fade" id="product8Modal" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-lg">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title">Essenza - Imágenes</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+        </div>
+        <div class="modal-body">
+          <div id="carouselProduct8" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-inner">
+              <div class="carousel-item active">
+                <img src="../assets/casual21.jpg" class="d-block w-100" alt="Essenza imagen 1">
+              </div>
+              <div class="carousel-item">
+                <img src="../assets/casual22.jpg" class="d-block w-100" alt="Essenza imagen 2">
+              </div>
+              <div class="carousel-item">
+                <img src="../assets/casual2.jpg" class="d-block w-100" alt="Essenza imagen 3">
+              </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselProduct8" data-bs-slide="prev">
+              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Anterior</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselProduct8" data-bs-slide="next">
+              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Siguiente</span>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+    <!-- Modal Producto 3 -->
+  <div class="modal fade" id="product9Modal" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-lg">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title">Nómada - Imágenes</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+        </div>
+        <div class="modal-body">
+          <div id="carouselProduct9" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-inner">
+              <div class="carousel-item active">
+                <img src="../assets/casual31.jpg" class="d-block w-100" alt="Nómada imagen 1">
+              </div>
+              <div class="carousel-item">
+                <img src="../assets/casual32.jpg" class="d-block w-100" alt="Nómada imagen 2">
+              </div>
+              <div class="carousel-item">
+                <img src="../assets/casual3.jpg" class="d-block w-100" alt="Nómada imagen 3">
+              </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselProduct9" data-bs-slide="prev">
+              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Anterior</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselProduct9" data-bs-slide="next">
+              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Siguiente</span>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <main class="container my-4">
+        <h1 class="h3 mb-4 text-center"></h1>
+            <div class="row">
+                <div class="col-6 col-md-3 mb-4">
+                    <div class="card h-100">
+                        <img src="../assets/nino1.jpg" class="card-img-top img-fluid" alt="PequeHuella">
+                        <div class="card-body text-center d-flex flex-column">
+                            <h5 class="card-tittle">PequeHuella</h5>
+                            <p class="text-success fw-bold mb-1">$380.000</p>
+                            <button class="btn btn-primary mt-auto add-to-cart" data-id="1" data-name="PequeHuella" data-price="380000"> Agregar al carrito
+                            </button>
+                            <button class="btn btn-link mt-2" data-bs-toggle="modal" data-bs-target="#product10Modal">
+                                Ver detalles
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-6 col-md-3 mb-4">
+                    <div class="card h-100">
+                        <img src="../assets/nino2.jpg" class="card-img-top img-fluid" alt="MiniPasos">
+                        <div class="card-body text-center d-flex flex-column">
+                            <h5 class="card-tittle">MiniPasos</h5>
+                            <p class="text-success fw-bold mb-1">$200.000</p>
+                            <button class="btn btn-primary mt-auto add-to-cart" data-id="2" data-name="MiniPasos" data-price="200000"> Agregar al carrito
+                            </button>
+                            <button class="btn btn-link mt-2" data-bs-toggle="modal" data-bs-target="#product11Modal">
+                                Ver detalles
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-6 col-md-3 mb-4">
+                    <div class="card h-100">
+                        <img src="../assets/nino3.jpg" class="card-img-top img-fluid" alt="Saltarín">
+                        <div class="card-body text-center d-flex flex-column">
+                            <h5 class="card-tittle">Saltarín</h5>
+                            <p class="text-success fw-bold mb-1">$190.000</p>
+                            <button class="btn btn-primary mt-auto add-to-cart" data-id="3" data-name="Saltarín" data-price="190000"> Agregar al carrito
+                            </button>
+                            <button class="btn btn-link mt-2" data-bs-toggle="modal" data-bs-target="#product12Modal">
+                                Ver detalles
+                            </button>
+                        </div>
+                    </div>
+                </div>   
+            </div>
+            <div id="add-to-cart-msg" class="alert alert-success position-fixed bottom-0 enda-0 me-3 mb-3" style="display:none">
+                Producto añadido al carrito
+            </div>
+    </main>
+<!-- Modals de detalles de producto (galerías) -->
+  <!-- Modal Producto 1 -->
+  <div class="modal fade" id="product10Modal" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-lg">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title">PequeHuella - Imágenes</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+        </div>
+        <div class="modal-body">
+          <div id="carouselProduct10" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-inner">
+              <div class="carousel-item active">
+                <img src="../assets/ninos11.jpg" class="d-block w-100" alt="PequeHuella imagen 1">
+              </div>
+              <div class="carousel-item">
+                <img src="../assets/ninos12.jpg" class="d-block w-100" alt="PequeHuella imagen 2">
+              </div>
+              <div class="carousel-item">
+                <img src="../assets/nino1.jpg" class="d-block w-100" alt="PequeHuella imagen 3">
+              </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselProduct10" data-bs-slide="prev">
+              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Anterior</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselProduct10" data-bs-slide="next">
+              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Siguiente</span>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- Modal Producto 2 -->
+  <div class="modal fade" id="product11Modal" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-lg">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title">MiniPasos - Imágenes</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+        </div>
+        <div class="modal-body">
+          <div id="carouselProduct11" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-inner">
+              <div class="carousel-item active">
+                <img src="../assets/ninos21.jpg" class="d-block w-100" alt="MiniPasos imagen 1">
+              </div>
+              <div class="carousel-item">
+                <img src="../assets/nino2.jpg" class="d-block w-100" alt="MiniPasos imagen 2">
+              </div>
+              <div class="carousel-item">
+                <img src="../assets/ninos22.jpg" class="d-block w-100" alt="MiniPasos imagen 3">
+              </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselProduct11" data-bs-slide="prev">
+              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Anterior</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselProduct11" data-bs-slide="next">
+              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Siguiente</span>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+    <!-- Modal Producto 3 -->
+  <div class="modal fade" id="product12Modal" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-lg">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title">Saltarín - Imágenes</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+        </div>
+        <div class="modal-body">
+          <div id="carouselProduct12" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-inner">
+              <div class="carousel-item active">
+                <img src="../assets/ninos31.jpg" class="d-block w-100" alt="Saltarín imagen 1">
+              </div>
+              <div class="carousel-item">
+                <img src="../assets/nino3.jpg" class="d-block w-100" alt="Saltarín imagen 2">
+              </div>
+              <div class="carousel-item">
+                <img src="../assets/ninos32.jpg" class="d-block w-100" alt="Saltarín imagen 3">
+              </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselProduct12" data-bs-slide="prev">
+              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Anterior</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselProduct12" data-bs-slide="next">
+              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Siguiente</span>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+   
+  
+  
+  
+  
+  <footer class="bg-dark text-white text-center py-3">
+        <p>&copy;2025 Pasos & Estilo - Todos los derechos reservados</p>
+    </footer>
+
+    <!-- Scripts JavaScript -->
+  <script src="https://code.jquery.com/jquery-3.7.0.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="../js/script.js"></script>
+</body>
+</html>
